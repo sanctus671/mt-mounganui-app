@@ -12,3 +12,4 @@ plugins
 *.DS_Store
 
 app/scripts/configuration.js
+/misc

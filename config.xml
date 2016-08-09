@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="nz.net.mountmaunganui.mtbizdirectory" version="2.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="nz.net.mountmaunganui.mtbizdirectory" version="2.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"  xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Mt Biz Directory</name>
   <description>
         Find, discover and connect with local Mount Maunganui businesses, in our easy to use app.
