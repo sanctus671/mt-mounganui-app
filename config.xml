@@ -11,7 +11,6 @@
     </author>
 	
   <content src="index.html"/>
-  <access origin="*"/>
   <preference name="android-build-tool" value="gradle" />
   <preference name="phonegap-version" value="cli-6.0.0" /> 
     <preference name="permissions" value="none" />
@@ -48,7 +47,7 @@
 	<gap:plugin name="cordova-plugin-geolocation" source="npm"/>	
 	<gap:plugin name="cordova-plugin-transport-security" source="npm"/>	
 	
-	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+	
 	
 	<gap:plugin name="cordova-plugin-email-composer" source="npm"/>	
 
@@ -60,13 +59,10 @@
 	
 	<gap:plugin name="cordova-plugin-inappbrowser" source="npm"/>
 	
-	
+	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
 	
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>	
-	
-	
-	<content src="index.html"/>
-	<access origin="*"/>
+
 
 	<icon gap:platform="ios" src="resources/ios/icon/icon.png" width="57" height="57"/>
 	<icon gap:platform="ios" src="resources/ios/icon/icon@2x.png" width="114" height="114"/>
@@ -118,8 +114,7 @@
     <gap:splash gap:platform="android" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" gap:qualifier="port-xxxhdpi"/>
 	
 	
-	<icon src="resources/icon.png" />
-	<gap:splash src="resources/splash.png" />
+
 
   
   
