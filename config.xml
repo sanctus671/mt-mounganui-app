@@ -37,32 +37,7 @@
 	<preference name="SplashScreenBackgroundColor" value="white" />
 	
 	
-    <gap:plugin name="cordova-plugin-network-information" source="npm"/>
-    <gap:plugin name="cordova-plugin-splashscreen" source="npm"/>
 
-	<gap:plugin name="cordova-plugin-statusbar" source="npm"/>	
-
-	<gap:plugin name="cordova-plugin-compat" source="npm"/>	
-	<gap:plugin name="cordova-plugin-console" source="npm"/>	
-	<gap:plugin name="cordova-plugin-device" source="npm"/>	
-	<gap:plugin name="cordova-plugin-geolocation" source="npm"/>	
-	<gap:plugin name="cordova-plugin-transport-security" source="npm"/>	
-	
-	
-	
-	<gap:plugin name="cordova-plugin-email-composer" source="npm"/>	
-
-	<gap:plugin name="ionic-plugin-keyboard" source="npm"/>	
-	
-	<gap:plugin name="phonegap-plugin-push" source="npm" version="1.7.0">
-		<param name="SENDER_ID" value="345453645665" />
-	</gap:plugin>	
-	
-	<gap:plugin name="cordova-plugin-inappbrowser" source="npm"/>
-	
-	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
-	
-	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>	
 	
 	
 	
