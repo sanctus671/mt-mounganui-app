@@ -1,0 +1,53 @@
+<ion-view view-title="Directory" class="businesses">
+	<ion-nav-buttons side="right">
+		<!-- <button class="button button-clear icon ion-android-options" ng-click="vm.showFilter()"></button> -->
+	</ion-nav-buttons>
+
+	<ion-content ng-init="vm.search = ''">
+<!-- 		
+		<ion-scroll zooming="true" direction="x" scrollbar-x="false" class="categories-filter">
+			<span ng-repeat="category in vm.categories">
+				<button class="button button-light filter-button"
+					ng-click="vm.filterByCategory(category.slug)"
+					ng-class="{'active-filter-button': category.slug === vm.selectedCategory}">
+					{{category.name}}
+				</button>
+			</span>
+		</ion-scroll>
+ -->
+		<div class="item search-box">
+			<input type="text" placeholder="Search" ng-model="vm.search" />
+		</div>
+
+		<label class="item item-input item-select">
+	    <div class="input-label">
+	      Category
+	    </div>
+	    <select ng-model="vm.selectedCategory" ng-change="vm.selectedSubcategory = 'All'; vm.filterByCategories()">
+	      <option value="All">All</option>
+	      <option ng-repeat="category in vm.categories" ng-value="category.slug">{{ category.name }}</option>
+	    </select>
+	  </label>
+
+	  <label class="item item-input item-select">
+	    <div class="input-label">
+	      Subcategory
+	    </div>
+	    <select ng-model="vm.selectedSubcategory" ng-change="vm.filterByCategories()">
+	      <option value="All">All</option>
+	      <option ng-repeat="subcategory in vm.subcategories[vm.selectedCategory]" ng-value="subcategory.slug">{{ subcategory.name }}</option>
+	    </select>
+	  </label>
+
+		<div class="item item-thumbnail-left item-text-wrap"
+			ng-click="vm.navigate(business._id)"
+			ng-repeat="business in vm.businesses | filter: { name: vm.search } | orderBy: vm.sortBy">
+			<img ng-src="{{ business.profile_image.urls.thumb || 'images/no-image-available.png' }}">
+			<h2>{{business.name}}</h2>
+			<span class="distance">{{business.distance}}</span>
+			<h3>{{business.category | findNameBySlug:vm.categories }}<span ng-if="business.subcategory"> | {{business.subcategory | findNameBySlug:vm.subcategories[business.category] }}</span></h3>
+			<p><span ng-bind-html="business.meta.description | limitTo: 140"></span>{{business.meta.description.length > 140 ? '...' : ''}}</p>
+		</div>
+
+	</ion-content>
+</ion-view>

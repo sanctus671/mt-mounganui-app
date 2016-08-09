@@ -1,0 +1,31 @@
+<ion-view view-title="Favorites" cache-view="false">
+	<ion-content ng-init="vm.search = ''" ng-class="{ 'vcenter': vm.businesses.length === 0 }">
+		<ion-list ng-if="vm.businesses.length > 0" can-swipe="true">
+			<ion-item class="search-box">
+				<input type="text" placeholder="Search" ng-model="vm.search" />
+			</ion-item>
+			<ion-item class="item item-thumbnail-left item-text-wrap"
+				ng-click="vm.navigate(business._id)"
+				ng-repeat="business in vm.businesses | filter: { name: vm.search } | orderBy: vm.sortBy">
+				<img ng-src="{{ business.profile_image.urls.thumb }}">
+				<h2>{{business.name}}</h2>
+				<span class="distance">{{business.distance}}</span>
+				<h3>{{business.category | findNameBySlug:vm.categories }}<span ng-if="business.subcategory"> | {{business.subcategory | findNameBySlug:vm.subcategories[business.category] }}</span></h3>
+				<p><span ng-bind-html="business.meta.description | limitTo: 140"></span>{{business.meta.description.length > 140 ? '...' : ''}}</p>
+				
+				<ion-option-button class="button-assertive" ng-click="vm.deleteFromFavorites(business)">
+					Delete
+				</ion-option-button>
+			</ion-item>
+		</ion-list>
+
+		<div ng-if="vm.businesses.length === 0">
+
+			<h1 class="text-center"><i class="icon ion-sad-outline"></i></h1>
+			<p class="text-center padding-top dark">
+				<span>There are no favorites in your list!</span>
+			</p>
+		</div>
+
+	</ion-content>
+</ion-view>
