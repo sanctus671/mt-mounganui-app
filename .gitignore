@@ -49,3 +49,9 @@ app/scripts/configuration.js
 /test/.jshintrc
 /resources/ios/icon/iOS App Store.png
 /resources/ios/icon/iOS App Store.png
+/www/bower_components/conversionjs/LICENSE
+/www/bower_components/conversionjs/bower.json
+/www/bower_components/conversionjs/conversion.min.js
+/www/bower_components/conversionjs/gruntfile.js
+/www/bower_components/conversionjs/index.html
+/www/bower_components/conversionjs/index.js
