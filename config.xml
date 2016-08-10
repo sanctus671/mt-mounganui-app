@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.titaniumtemplates.businessdirectory" version="2.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" versionCode="201009">
+<widget id="nz.net.mountmaunganui.mtbizdirectory" version="2.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" versionCode="201009">
 
   <name>Mt Biz Directory</name>
   <description>
