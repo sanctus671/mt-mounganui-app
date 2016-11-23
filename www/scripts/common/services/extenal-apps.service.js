@@ -23,18 +23,28 @@
 		}
 
 		function openMapsApp(coords) {
+                    console.log(coords);
 			if (angular.isObject(coords)) {
 				coords = coords.latitude + ',' + coords.longitude;
 			}
 
 			var q;
+                        
+                        /*
 			if (ionic.Platform.isAndroid()) {
 				q = 'geo:' + coords + '?q=' + coords;
 			} else {
 				q = 'maps://maps.apple.com/?q=' + coords;
 			}
 			q = q.replace(' ', '');
-			$window.location.href = q;
+                    
+                        
+                        */
+                       
+                        q = "http://maps.google.com/?q=" + coords;
+                        
+                        window.open(q,"_system");
+			//$window.location.href = q;
 		}
 
 		function openExternalUrl(url) {

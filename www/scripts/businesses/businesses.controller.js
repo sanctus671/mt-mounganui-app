@@ -54,6 +54,7 @@
 		}
 
 		function filterByCategories() {
+                        document.querySelector("select").blur();
 			loadBusinesses();
 		}
 

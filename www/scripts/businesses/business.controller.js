@@ -134,7 +134,7 @@
 		}
 
 		function getDirections() {
-			externalAppsService.openMapsApp(business.officeLocation);
+			externalAppsService.openMapsApp(business.address);
 		}
 	}
 })();
