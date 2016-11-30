@@ -52,7 +52,7 @@
 	
 	<gap:plugin name="cordova-plugin-email-composer" source="npm"/>	
 
-	<gap:plugin name="ionic-plugin-keyboard" source="npm"/>	
+	<gap:plugin name="ionic-plugin-keyboard" source="npm" version="1.0.8"/>	
 	
 	<gap:plugin name="phonegap-plugin-push" source="npm" version="1.7.0">
 		<param name="SENDER_ID" value="345453645665" />
