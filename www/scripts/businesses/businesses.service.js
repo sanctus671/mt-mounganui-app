@@ -38,7 +38,6 @@
 		}
 
 		function getBusiness(businessId) {
-                    console.log(dataService.getBusiness(businessId));
 			return dataService.getBusiness(businessId);
 		}
 

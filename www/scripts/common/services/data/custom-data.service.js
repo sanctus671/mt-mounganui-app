@@ -173,7 +173,6 @@
                                             }
                                         }
 					localStorageService.set('subcategories', subcategories);
-                                        console.log(subcategories);
 					return subcategories;
 				}, function (response) {
 					subcategories = localStorageService.get('subcategories');
