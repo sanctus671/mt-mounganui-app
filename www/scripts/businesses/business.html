@@ -48,6 +48,20 @@
 				<i class="icon ion-link"></i>
 				Visit our website
 			</a>
+ 
+ 			<a class="item item-icon-left" ng-repeat="(socialType, socialLink) in vm.business.social" ng-click="vm.goToBusinessSocial(socialLink)" ng-if="socialLink">
+				<i class="icon fa fa-{{socialType === 'gplus' ? 'google-plus' : socialType}}"></i>
+				Visit our 
+                                <span ng-if="socialType === 'facebook'">Facebook</span>
+                                <span ng-if="socialType === 'gplus'">Google+</span>
+                                <span ng-if="socialType === 'instagram'">Instagram</span>
+                                <span ng-if="socialType === 'linkedin'">LinkedIn</span>
+                                <span ng-if="socialType === 'pinterest'">Pinterest</span>
+                                <span ng-if="socialType === 'twitter'">Twitter</span>
+                                <span ng-if="socialType !== 'twitter' && socialType !== 'pinterest' && socialType !== 'linkedin' && socialType !== 'instagram' && socialType !== 'gplus' && socialType !== 'facebook'">
+                                    {{socialType}}
+                                </span>
+			</a>
 
 			<a class="item item-icon-left" ng-click="vm.getDirections()">
 				<i class="icon ion-navigate"></i>

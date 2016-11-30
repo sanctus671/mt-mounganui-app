@@ -21,7 +21,7 @@
 		var commonUrl = ENV.apiUrl + 'common';
 		var businessUrl = ENV.apiUrl + 'businesses';
 		var categoryUrl = ENV.apiUrl + 'statics/categories';
-		var subcategoryUrl = ENV.apiUrl + 'statics/subcategories';
+		var subcategoryUrl = ENV.apiUrl + 'subcategories';
 
 		var service = {
 			getBusinesses: getBusinesses,
@@ -154,12 +154,26 @@
 			} else {
 				return $http({
 					method: 'GET',
-					url: subcategoryUrl
+					url: subcategoryUrl,
+                                        params:{
+                                            _perPage: 'ALL',
+                                            _sortField: 'name',
+                                            _sortDir: 'DESC'
+                                        }
 				}).then(function(response) {
-					subcategories = response.data;
-					
+					var subcategoriesRaw = response.data;
+                                        subcategories = [];
+					for (var index in subcategoriesRaw){
+                                            var subcategory = subcategoriesRaw[index];
+                                            if (subcategory.category in subcategories){
+                                                subcategories[subcategory.category].push(subcategory);
+                                            }
+                                            else{
+                                                subcategories[subcategory.category] = [subcategory];
+                                            }
+                                        }
 					localStorageService.set('subcategories', subcategories);
-
+                                        console.log(subcategories);
 					return subcategories;
 				}, function (response) {
 					subcategories = localStorageService.get('subcategories');
@@ -238,6 +252,7 @@
 				var business = _.find(businesses, function(business) {
 					return business._id === businessId;
 				});
+                                console.log(business);
 				// business = enrichBusiness(business);
 				return business;
 			});

@@ -31,6 +31,7 @@
 			// 	rating: business.rating
 			// },
 			goToBusinessWebsite: goToBusinessWebsite,
+                        goToBusinessSocial: goToBusinessSocial,
 			showNews: showNews,
 			showServices: showServices,
 			showCatalogues: showCatalogues,
@@ -76,6 +77,10 @@
 		function goToBusinessWebsite() {
 			$window.open(business.site_url, '_system', 'location=yes');
 		}
+                
+		function goToBusinessSocial(link) {
+			$window.open(link, '_system', 'location=yes');
+		}                
 
 		function showReviews() {
 			$state.go('app.reviews', {
